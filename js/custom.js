@@ -80,35 +80,35 @@ function runMatter() {
   World.add(world, attractiveBody);
 
   // add some bodies that to be attracted
-  for (var i = 0; i < 20; i += 1) {
+  for (var i = 0; i < 10; i += 1) {
     let x = Common.random(0, render.options.width);
     let y = Common.random(0, render.options.height);
     let s = Common.random() > 0.6 ? Common.random(10, 40) : Common.random(4, 30);
 
-    // let poligonNumber = Common.random(1, 2);
-    // var body = Bodies.polygon(
-    //   x,
-    //   y,
-    //   poligonNumber,
-    //   s,
-    //   {
-    //     mass: .6,
-    //     friction: 0,
-    //     frictionAir: 0.02,
-    //     angle: Math.round(Math.random() * 360),
-    //     render: {
-    //       fillStyle: "#FFFFFF",
-    //       strokeStyle: `#DDDDDD`,
-    //       lineWidth: 0,
-    //       sprite: {
-    //             texture: './img/pattern-nbe-10.png',
-    //             xScale: .5,
-    //             yScale: .5
-    //         }
-    //     }
-    //   },
-    // );
-    // World.add(world, body);
+    let poligonNumber = Common.random(1, 2);
+    var body = Bodies.polygon(
+      x,
+      y,
+      poligonNumber,
+      s,
+      {
+        mass: .6,
+        friction: 0,
+        frictionAir: 0.02,
+        angle: Math.round(Math.random() * 360),
+        render: {
+          fillStyle: "#FFFFFF",
+          strokeStyle: `#DDDDDD`,
+          lineWidth: 0,
+          sprite: {
+                texture: './img/pattern-nbe-10.png',
+                xScale: .5,
+                yScale: .5
+            }
+        }
+      },
+    );
+    World.add(world, body);
 
     var body = Bodies.polygon(
       x,
@@ -182,29 +182,29 @@ function runMatter() {
     );
     World.add(world, body);
 
-    // var body = Bodies.polygon(
-    //   x,
-    //   y,
-    //   Common.random(1, 2),
-    //   s,
-    //   {
-    //     mass: .1,
-    //     friction: 0.6,
-    //     frictionAir: 0.02,
-    //     angle: Math.round(Math.random() * 360),
-    //     render: {
-    //       fillStyle: "#FFFFFF",
-    //       strokeStyle: `#DDDDDD`,
-    //       lineWidth: 0,
-    //       sprite: {
-    //             texture: './img/pattern-nbe-11.png',
-    //             xScale: .5,
-    //             yScale: .5
-    //         }
-    //     }
-    //   },
-    // );
-    // World.add(world, body);
+    var body = Bodies.polygon(
+      x,
+      y,
+      Common.random(1, 2),
+      s,
+      {
+        mass: .1,
+        friction: 0.6,
+        frictionAir: 0.02,
+        angle: Math.round(Math.random() * 360),
+        render: {
+          fillStyle: "#FFFFFF",
+          strokeStyle: `#DDDDDD`,
+          lineWidth: 0,
+          sprite: {
+                texture: './img/pattern-nbe-11.png',
+                xScale: .5,
+                yScale: .5
+            }
+        }
+      },
+    );
+    World.add(world, body);
 
 
     var body = Bodies.polygon(
